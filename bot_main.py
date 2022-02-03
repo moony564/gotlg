@@ -18,13 +18,14 @@ async def on_ready():
 @app.command()
 async def 명령어(ctx):
     embed = discord.Embed(colour = 0x00ff00)
-    embed.add_field(name='```접두사```', value='```!```', inline=False)
-    embed.add_field(name='1', value='나이', inline=False)
-    embed.add_field(name='2', value='혈액형', inline=False)
-    embed.add_field(name='3', value='사는곳', inline=False)
-    embed.add_field(name='4', value='방송계기', inline=False)
-    embed.add_field(name='5', value='트위치', inline=False)
-    embed.add_field(name='6', value='유튜브', inline=False)
+    embed.add_field(name='```[접두사]```', value='```!```', inline=False)
+    embed.add_field(name='[1]', value='나이', inline=False)
+    embed.add_field(name='[2]', value='혈액형', inline=False)
+    embed.add_field(name='[3]', value='사는곳', inline=False)
+    embed.add_field(name='[4]', value='방송계기', inline=False)
+    embed.add_field(name='[5]', value='트위치', inline=False)
+    embed.add_field(name='[6]', value='유튜브', inline=False)
+    embed.add_field(name='[삼국지]', value='장비', inline=False)
     await ctx.send(embed=embed)
 
 # embed.add_field(value='', inline=False) #임배드
@@ -51,6 +52,13 @@ async def 트위치(ctx):
 @app.command()
 async def 유튜브(ctx):
     await ctx.send('https://www.youtube.com/channel/UCXPOGWwjH-noqWCn_URbWGA')
+    
+@app.command()
+async def 장비(ctx):
+    await ctx.send('마우스 : G402')
+    await ctx.send('키보드 : G610K V2')
+    await ctx.send('그래픽카드 : NVIDIA GeForce GTX 1650')
+    await ctx.send('CPU : AMD Ryzen 5 5600X')
     
 access_token = os.environ["BOT_TOKEN"]
 app.run(access_token)
