@@ -65,9 +65,8 @@ async def 장비(ctx):
     await ctx.send(embed=embed)
     
 @app.command()
-async def 살려줘(ctx):
-    await ctx.reply('여기서 1년만 하면 꺼내주신다고 하셨는데..')
-    await ctx.reply('10년이나 같혀있다..')
+async def 뭔데(ctx):
+    await ctx.reply('갑자기?')
     
 access_token = os.environ["BOT_TOKEN"]
 app.run(access_token)
