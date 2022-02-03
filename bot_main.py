@@ -25,7 +25,6 @@ async def 명령어(ctx):
     embed.add_field(name='4', value='방송계기', inline=False)
     embed.add_field(name='5', value='트위치', inline=False)
     embed.add_field(name='6', value='유튜브', inline=False)
-    embed.add_field(name='7', value='디코', inline=False)
     await ctx.send(embed=embed)
 
 # embed.add_field(value='', inline=False) #임배드
@@ -52,10 +51,6 @@ async def 트위치(ctx):
 @app.command()
 async def 유튜브(ctx):
     await ctx.send('https://www.youtube.com/channel/UCXPOGWwjH-noqWCn_URbWGA')
-
-@app.command()
-async def 디코(ctx):
-    await ctx.send('게임방 디스코드 방 : https://discord.gg/SFw3xdT')
-
+    
 access_token = os.environ["BOT_TOKEN"]
 app.run(access_token)
