@@ -56,8 +56,6 @@ async def 유튜브(ctx):
 @app.command()
 async def 디코(ctx):
     await ctx.send('게임방 디스코드 방 : https://discord.gg/SFw3xdT')
-    await ctx.send('트위치 디스코드 방 : https://discord.gg/tEEXa39')
-    await ctx.send('유튜브 디스코드 방 : https://discord.gg/wXTWKws')
 
 access_token = os.environ["BOT_TOKEN"]
 app.run(access_token)
